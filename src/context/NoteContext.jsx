@@ -6,6 +6,7 @@ const NoteContext = createContext();
 export const NoteProvider = ({ children }) => {
   const { setShowForm } = useContext(ToggleContext);
 
+  const [loading, setLoading] = useState(true);
   const [notes, setNotes] = useState([]);
   const [note, setNote] = useState({
     id: 0,
@@ -17,14 +18,17 @@ export const NoteProvider = ({ children }) => {
     getNotes();
   }, []);
 
+  const url = 'https://tet-api.onrender.com/notes';
+
   const getNotes = async () => {
-    const res = await fetch('/notes?_sort=id&_order=desc');
+    const res = await fetch(`${url}?_sort=id&_order=desc`);
     const data = await res.json();
     setNotes(data);
+    setLoading(false);
   };
 
   const addNote = async (newNote) => {
-    const res = await fetch('/notes', {
+    const res = await fetch(url, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -37,7 +41,7 @@ export const NoteProvider = ({ children }) => {
   };
 
   const deleteNote = async (id) => {
-    await fetch(`/notes/${id}`, {
+    await fetch(`${url}/${id}`, {
       method: 'DELETE',
     });
 
@@ -45,7 +49,7 @@ export const NoteProvider = ({ children }) => {
   };
 
   const updateNote = async (id, updatedNote) => {
-    const res = await fetch(`/notes/${id}`, {
+    const res = await fetch(`${url}/${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -83,6 +87,7 @@ export const NoteProvider = ({ children }) => {
       value={{
         note,
         notes,
+        loading,
         changeHandler,
         submitHandler,
         deleteNote,

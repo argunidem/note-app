@@ -46,7 +46,6 @@ const Note = forwardRef(({ note }, ref) => {
       isEditing: true,
     });
     e.target.parentElement.parentElement.scrollTo(0, 1000);
-    console.log(e.target.parentElement.offsetHeight);
   };
 
   const submitHandler = (e) => {

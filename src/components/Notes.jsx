@@ -22,7 +22,7 @@ const Notes = () => {
                 initial={{ opacity: 0, x: -1000 }}
                 whileHover={{
                   rotate: -3,
-                  transition: { duration: 0.1, type: 'backInOut' },
+                  transition: { duration: 0.3, type: 'backInOut' },
                   boxShadow: '3px 10px 20px rgba(255, 255, 255, 0.2)',
                 }}
                 animate={{ opacity: 1, x: 0 }}

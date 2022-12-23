@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
 
-/* background-color: #550527; */
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +8,6 @@
 }
 
 body {
-  /* background-color: #27272a; */
   background-color: rgb(15 23 42);
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -39,7 +37,6 @@ body,
 }
 
 header {
-  /* background-color: #37373f; */
   background-color: rgb(30 41 59);
   height: 70px;
   padding-block: 4vh;
@@ -72,7 +69,6 @@ header {
   user-select: none;
   font-size: 20px;
   cursor: pointer;
-  /* background-color: rgb(55, 55, 63); */
   background: rgb(30, 41, 59);
   color: #ccc;
   border-radius: 10px;
@@ -85,7 +81,6 @@ header {
 }
 
 .add > button:hover {
-  /* background-color: rgb(66, 66, 75); */
   background: rgb(33, 48, 71);
   color: #fff;
 }
@@ -123,7 +118,6 @@ form > *:not(svg) {
   width: 100%;
   padding: 10px 12px;
   color: #888;
-  /* background-color: #37373f; */
   background-color: rgb(33, 48, 71);
   border: none;
   font-size: 16px;
@@ -194,20 +188,9 @@ button.save-btn:hover {
   position: relative;
   margin: 3%;
   padding: 20px 20px 20px 15px;
-  /* background-color: #888; */
   background-color: #1e293b;
   border-radius: 12px;
   width: 300px;
-  transition: all 0.5s;
-}
-
-/* .box:hover {
-  transform: rotate(-2deg) scale(1.05) !important;
-  box-shadow: 3px 10px 20px rgba(255, 255, 255, 0.2);
-} */
-
-.box:hover form {
-  transform: unset;
 }
 
 .box::-webkit-scrollbar-thumb {
@@ -257,7 +240,6 @@ button.save-btn:hover {
 .box .edit-btn {
   cursor: pointer;
   position: absolute;
-  /* color: #3a82c5; */
   color: #306761;
   top: 5px;
   right: 35px;
@@ -286,7 +268,6 @@ button.save-btn:hover {
 
 .box .edit-btn:hover {
   color: #31867c;
-  /* color: #5a9edd; */
 }
 
 .box .close-form-btn:hover {
